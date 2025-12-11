@@ -1,0 +1,77 @@
+.add-employee-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #000);
+}
+
+.add-employee-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  width: 360px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0,255,150,0.15);
+}
+
+.add-employee-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-employee-card input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.add-employee-card input::placeholder {
+  color: #bbb;
+}
+
+.add-employee-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00ff99, #00cc77);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-employee-card button:hover {
+  box-shadow: 0 0 20px #00ff99;
+}
+
+/* ✅ FIX: Select dropdown text visibility */
+select {
+  background-color: #1e293b;   /* dark bg */
+  color: #ffffff;              /* text visible */
+  border: 1px solid #334155;
+}
+
+select option {
+  background-color: #0f172a;   /* dropdown list bg */
+  color: #ffffff;
+}
+
+/* placeholder option */
+select option[value=""] {
+  color: #94a3b8;
+}
+
+select {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}

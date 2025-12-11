@@ -1,0 +1,36 @@
+/* Normal screen view */
+.slip-container {
+  background: #1f2937; /* dark grey for normal view */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* PRINT MODE */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area, .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;     /* Pure white slip */
+    padding: 20px;
+  }
+
+  /* Hide sidebar */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Remove background of page */
+  body {
+    background: white !important;
+  }
+}

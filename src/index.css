@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL DARK BACKGROUND */
+body {
+  margin: 0;
+  background-color: #1e293b;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Print rules: hide sidebar and keep slip white */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .print-area { background: white !important; color: black !important; padding: 10px !important; }
+}
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .print-area {
+    width: 80mm !important;
+    margin: 0 auto;
+  }
+  button {
+    display: none !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+@media print {
+  body, html {
+    background: white !important;
+  }
+
+  .bg-gray-900 {
+    background: white !important;
+  }
+
+  .print-area {
+    background: white !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}
+@media print {
+  body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .print-area {
+    width: 302px !important; /* 80mm */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    margin: 0 !important;
+    size: 80mm auto !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}
+@media print {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    margin: 0;        /* removes huge white area */
+    size: auto;       /* THIS IS THE MAGIC — auto height */
+  }
+
+  .print-area {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* ✅ FIX DROPDOWN CUT ISSUE */
+.add-employee-card {
+  overflow: visible !important;
+}
+
+select {
+  position: relative;
+  z-index: 99999;
+}
+
+input[type="week"] {
+  color-scheme: dark;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  button {
+    display: none !important;
+  }
+
+  h3, p {
+    color: black !important;
+  }
+}
